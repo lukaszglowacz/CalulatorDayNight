@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,12 +18,13 @@
             <span><i class="fa fa-battery-full" aria-hidden="true"></i></span>
         </div>
         <!-- here is console and i have to improve -->
-        <div class="console" dir="rtl">
-            <div colspan="3"> <input class="display-box5" type="text" id="memory" enabled/> </div>
+        <div class="console output">
+            <!-- <div colspan="3"> <input class="display-box5" type="text" id="memory" enabled/> </div>
             <div colspan="3"> <input class="display-box4" type="text" id="memory" enabled/> </div>
             <div colspan="3"> <input class="display-box3" type="text" id="memory" enabled/> </div>
-            <div colspan="3"> <input class="display-box2" type="text" id="memory" enabled/> </div>
-            <div colspan="3"> <input class="display-box" type="text" id="result" enabled/> </div>
+            <div colspan="3"> <input class="display-box2" type="text" id="memory" enabled/> </div> -->
+            <div data-previous-operand class="display-box2 previous-operand">123 +</div>
+            <div data-current-operand class="display-box current-operand">456</div>
         </div>
         <!-- here is darkmode and its fine -->
         
@@ -37,41 +38,41 @@
         <!-- here is the button center, i have to classified each button separate -->
         <div class="btn-main">
             <div class="btn-main-1">
-                <button class="btn-form full-yellow-btn">C</button>
+                <button data-all-clear class="btn-form full-yellow-btn span-two">C</button>
                 <button class="btn-form yellow-btn"><i class="fa-solid fa-square-root-variable"></i></button>
-                <button class="btn-form main-btn">7</button>
-                <button class="btn-form main-btn">4</button>
-                <button class="btn-form main-btn">1</button>
-                <button class="btn-form main-btn">.</button>
+                <button data-number class="btn-form main-btn num">7</button>
+                <button data-number class="btn-form main-btn num">4</button>
+                <button data-number class="btn-form main-btn num">1</button>
+                <button data-number class="btn-form main-btn">.</button>
                 
             </div>
 
             <div class="btn-main-2">
                 <button class="btn-form yellow-btn">(</button>
                 <button class="btn-form yellow-btn"><i class="fa-solid fa-percent"></i></button>
-                <button class="btn-form main-btn">8</button>
-                <button class="btn-form main-btn">5</button>
-                <button class="btn-form main-btn">2</button>
-                <button class="btn-form main-btn">0</button>
+                <button data-number class="btn-form main-btn num">8</button>
+                <button data-number class="btn-form main-btn num">5</button>
+                <button data-number class="btn-form main-btn num">2</button>
+                <button data-number class="btn-form main-btn num">0</button>
 
             </div>
 
             <div class="btn-main-3">
                 <button class="btn-form yellow-btn">)</button>
                 <button class="btn-form yellow-btn"><i class="fa-solid fa-plus-minus"></i></button>
-                <button class="btn-form main-btn">9</button>
-                <button class="btn-form main-btn">6</button>
-                <button class="btn-form main-btn">3</button>
-                <button class="btn-form main-btn"><i class="fa-solid fa-delete-left"></i></button>
+                <button data-number class="btn-form main-btn num">9</button>
+                <button data-number class="btn-form main-btn num">6</button>
+                <button data-number class="btn-form main-btn num">3</button>
+                <button data-delete class="btn-form main-btn"><i class="fa-solid fa-delete-left"></i></button>
 
             </div>
 
             <div class="btn-main-4">
                 <button class="btn-form purple-btn"><i class="fa-solid fa-xmark"></i></button>
-                <button class="btn-form purple-btn"><i class="fa-solid fa-divide"></i></button>
-                <button class="btn-form purple-btn">-</button>
-                <button class="btn-form purple-btn">+</button>
-                <buttton class="btn-equal"><i class="fa-solid fa-equals"></i></buttton>
+                <button data-operation class="btn-form purple-btn"><i class="fa-solid fa-divide"></i></button>
+                <button data-operation class="btn-form purple-btn">-</button>
+                <button data-operation class="btn-form purple-btn">+</button>
+                <buttton data-equals class="btn-equal span-two"><i class="fa-solid fa-equals"></i></buttton>
                 
             </div>    
         </div>
