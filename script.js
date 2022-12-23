@@ -1,4 +1,4 @@
-// add clock
+// clock----------------------------------------------------------------
 function startTime() {
     const today = new Date();
     let h = today.getHours();
@@ -14,20 +14,35 @@ function startTime() {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
   }
+// clock----------------------------------------------------------------
+// dark-mode------------------------------------------------------------
 
-  // This function clear all the values
-function clearScreen() {
-    document.getElementById("result").value = "";
-    }
+// dark-mode------------------------------------------------------------
 
-    // This function display values
-function display(value) {
-    document.getElementById("result").value += value;
-}
 
-    // This function evaluates the expression and returns result
-function calculate() {
-    var p = document.getElementById("result").value;
-    var q = eval(p);
-        document.getElementById("result").value = q;
-}
+
+// OLD CODE
+// const btn = document.querySelector(".slider");
+// const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+// const currentTheme = localStorage.getItem("theme");
+// if (currentTheme == "dark") {
+//   document.body.classList.toggle("dark-theme");
+// } else if (currentTheme == "light") {
+//   document.body.classList.toggle("light-theme");
+// }
+
+// btn.addEventListener("click", function () {
+//   if (prefersDarkScheme.matches) {
+//     document.body.classList.toggle("light-theme");
+//     var theme = document.body.classList.contains("light-theme")
+//       ? "light"
+//       : "dark";
+//   } else {
+//     document.body.classList.toggle("dark-theme");
+//     var theme = document.body.classList.contains("dark-theme")
+//       ? "dark"
+//       : "light";
+//   }
+//   localStorage.setItem("theme", theme);
+// });

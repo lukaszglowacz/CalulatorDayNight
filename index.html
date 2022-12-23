@@ -7,51 +7,74 @@
     <title>Calculator Day Night</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ec1214758d.js" crossorigin="anonymous"></script>
+
 </head>
 <body onload="startTime()">
-   
+        <!-- navbar - its ok but have to add code to battery -->
     <div class="form" id="form">
         <div class="navbar">
             <div class="txt" id="txt"></div>
+            <span><i class="fa fa-battery-full" aria-hidden="true"></i></span>
         </div>
-        <div class="console">
-            <td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
+        <!-- here is console and i have to improve -->
+        <div class="console" dir="rtl">
+            <div colspan="3"> <input class="display-box5" type="text" id="memory" enabled/> </div>
+            <div colspan="3"> <input class="display-box4" type="text" id="memory" enabled/> </div>
+            <div colspan="3"> <input class="display-box3" type="text" id="memory" enabled/> </div>
+            <div colspan="3"> <input class="display-box2" type="text" id="memory" enabled/> </div>
+            <div colspan="3"> <input class="display-box" type="text" id="result" enabled/> </div>
         </div>
-        <div class="btn">
-            <div class="sixth-level">
-                <td> <input class="btn-form" type="button" value="C" onclick="clearScreen()" id="btn" /> </td>
+        <!-- here is darkmode and its fine -->
+        <div class="darkmode">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            <p class="darkmode-txt">SWITCH TO DARK THEME</p>
+        </div>
+        <!-- here is the button center, i have to classified each button separate -->
+        <div class="btn-main">
+            <div class="btn-main-1">
+                <button class="btn-form full-yellow-btn">C</button>
+                <button class="btn-form yellow-btn"><i class="fa-solid fa-square-root-variable"></i></button>
+                <button class="btn-form">7</button>
+                <button class="btn-form">4</button>
+                <button class="btn-form">1</button>
+                <button class="btn-form">.</button>
+                
             </div>
-            <div class="fifth-level">
-                <td> <input class="btn-form" type="button" value="/" onclick="display('/')" /> </td>
+
+            <div class="btn-main-2">
+                <button class="btn-form yellow-btn">(</button>
+                <button class="btn-form yellow-btn"><i class="fa-solid fa-percent"></i></button>
+                <button class="btn-form">8</button>
+                <button class="btn-form">5</button>
+                <button class="btn-form">2</button>
+                <button class="btn-form">0</button>
+
             </div>
-            <div class="fourth-level">
-                <td> <input class="btn-form" type="button" value="7" onclick="display('7')" /> </td>
-                <td> <input class="btn-form" type="button" value="8" onclick="display('8')" /> </td>
-                <td> <input class="btn-form" type="button" value="9" onclick="display('9')" /> </td>
-                <td> <input class="btn-form" type="button" value="-" onclick="display('-')" /> </td>
+
+            <div class="btn-main-3">
+                <button class="btn-form yellow-btn">)</button>
+                <button class="btn-form yellow-btn"><i class="fa-solid fa-plus-minus"></i></button>
+                <button class="btn-form">9</button>
+                <button class="btn-form">6</button>
+                <button class="btn-form">3</button>
+                <button class="btn-form"><i class="fa-solid fa-delete-left"></i></button>
+
             </div>
-            <div class="third-level">
-                <td> <input class="btn-form" type="button" value="4" onclick="display('4')" /> </td>
-                <td> <input class="btn-form" type="button" value="5" onclick="display('5')" /> </td>
-                <td> <input class="btn-form" type="button" value="6" onclick="display('6')" /> </td>
-                <td> <input class="btn-form" type="button" value="+" onclick="display('+')" /> </td>
-            </div>
-            <div class="second-level">
-                <td> <input class="btn-form" type="button" value="1" onclick="display('1')" /> </td>
-                <td> <input class="btn-form" type="button" value="2" onclick="display('2')" /> </td>
-                <td> <input class="btn-form" type="button" value="3" onclick="display('3')" /> </td>
-            </div>
-            
-            <div class="first-level">
-                <td> <input class="btn-form" type="button" value="." onclick="display('.')" /> </td>
-                <td> <input class="btn-form" type="button" value="0" onclick="display('0')" /> </td>
-                <td> <input class="btn-form" type="button" value="*" onclick="display('*')" /> </td>
-            </div> 
+
+            <div class="btn-main-4">
+                <button class="btn-form purple-btn"><i class="fa-solid fa-xmark"></i></button>
+                <button class="btn-form purple-btn"><i class="fa-solid fa-divide"></i></button>
+                <button class="btn-form purple-btn">-</button>
+                <button class="btn-form purple-btn">+</button>
+                <buttton class="btn-equal"><i class="fa-solid fa-equals"></i></buttton>
+                
+            </div>    
         </div>
     </div>
-    <div class="equal">
-        <td> <input class="btn-equal" type="button" value="=" onclick="calculate()" id="btn" /> </td>
-    </div>
+    
 </body>
 </html>
- 
