@@ -15,34 +15,24 @@ function startTime() {
     return i;
   }
 // clock----------------------------------------------------------------
+
+
+
 // dark-mode------------------------------------------------------------
 
+const switchTheme = () => {
+  // Get root element and data-theme value
+  const rootElem = document.documentElement
+  let dataTheme = rootElem.getAttribute('data-theme'),
+      newTheme
+
+  newTheme = (dataTheme === 'light') ? 'dark' : 'light'
+
+  // Set the new HTML atribute
+  rootElem.setAttribute('data-theme', newTheme)
+}
+// Add event listner for the theme switcher
+document.getElementById('darmodecheck').addEventListener('click', switchTheme)
+
+
 // dark-mode------------------------------------------------------------
-
-
-
-// OLD CODE
-// const btn = document.querySelector(".slider");
-// const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-// const currentTheme = localStorage.getItem("theme");
-// if (currentTheme == "dark") {
-//   document.body.classList.toggle("dark-theme");
-// } else if (currentTheme == "light") {
-//   document.body.classList.toggle("light-theme");
-// }
-
-// btn.addEventListener("click", function () {
-//   if (prefersDarkScheme.matches) {
-//     document.body.classList.toggle("light-theme");
-//     var theme = document.body.classList.contains("light-theme")
-//       ? "light"
-//       : "dark";
-//   } else {
-//     document.body.classList.toggle("dark-theme");
-//     var theme = document.body.classList.contains("dark-theme")
-//       ? "dark"
-//       : "light";
-//   }
-//   localStorage.setItem("theme", theme);
-// });
