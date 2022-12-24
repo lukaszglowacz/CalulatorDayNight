@@ -20,6 +20,8 @@
     --themeMainBtnBkg: #f3f4f6;
     --themeMainIcon: #535b60;
     --themeBoxShadow: 3px 3px 5px rgb(102, 101, 101);
+    --displayParagraphLight: visible;
+    --displayParagraphDark: hidden;
 }
 
 :root[data-theme="dark"] {
@@ -34,6 +36,21 @@
     --themeMainIcon: rgb(233, 229, 229);
     --themeBoxShadow: 3px 3px 5px rgb(58, 59, 63);
 }
+
+.darkmode-txt {
+    font-size: 0.6rem;
+    padding-left: 10px;
+    color: #b8babb;
+    
+}
+
+.lightmode-txt {
+    font-size: 0.6rem;
+    padding-left: 10px;
+    color: #b8babb;
+    
+}
+
     
 body {
     font-family: 'Poppins', sans-serif;
@@ -287,12 +304,6 @@ body {
     align-items: center;
     justify-content:left;
     padding-left: 20px;
-}
-
-.darkmode-txt {
-    font-size: 0.6rem;
-    padding-left: 10px;
-    color: #b8babb;
 }
 
 /* The switch - the box around the slider */

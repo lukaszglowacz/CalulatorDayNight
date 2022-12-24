@@ -23,8 +23,8 @@
             <div colspan="3"> <input class="display-box4" type="text" id="memory" enabled/> </div>
             <div colspan="3"> <input class="display-box3" type="text" id="memory" enabled/> </div>
             <div colspan="3"> <input class="display-box2" type="text" id="memory" enabled/> </div> -->
-            <div data-previous-operand class="display-box2 previous-operand">123 +</div>
-            <div data-current-operand class="display-box current-operand">456</div>
+            <div data-previous-operand class="display-box2 previous-operand"></div>
+            <div data-current-operand class="display-box current-operand"></div>
         </div>
         <!-- here is darkmode and its fine -->
         
@@ -33,7 +33,7 @@
                 <input type="checkbox" id="darmodecheck">
                 <span class="slider round"></span>
               </label>
-            <p class="darkmode-txt">SWITCH TO DARK THEME</p>
+            <div><p class="darkmode-txt">SWITCH TO DARK THEME</p></div><div><p class="lightmode-txt">SWITCH TO LIGHT MODE</p></div>
         </div>
         <!-- here is the button center, i have to classified each button separate -->
         <div class="btn-main">
@@ -49,7 +49,7 @@
 
             <div class="btn-main-2">
                 <button class="btn-form yellow-btn">(</button>
-                <button class="btn-form yellow-btn"><i class="fa-solid fa-percent"></i></button>
+                <button data-operation class="btn-form yellow-btn">%</button>
                 <button data-number class="btn-form main-btn num">8</button>
                 <button data-number class="btn-form main-btn num">5</button>
                 <button data-number class="btn-form main-btn num">2</button>
@@ -68,11 +68,11 @@
             </div>
 
             <div class="btn-main-4">
-                <button class="btn-form purple-btn"><i class="fa-solid fa-xmark"></i></button>
-                <button data-operation class="btn-form purple-btn"><i class="fa-solid fa-divide"></i></button>
+                <button class="btn-form purple-btn">*</button>
+                <button data-operation class="btn-form purple-btn">/</i></button>
                 <button data-operation class="btn-form purple-btn">-</button>
                 <button data-operation class="btn-form purple-btn">+</button>
-                <buttton data-equals class="btn-equal span-two"><i class="fa-solid fa-equals"></i></buttton>
+                <buttton data-equals class="btn-equal span-two">=</i></buttton>
                 
             </div>    
         </div>

@@ -87,8 +87,11 @@ class Calculator {
       case '*':
         computation = prev * current
         break
-      case '÷':
+      case '/':
         computation = prev / current
+        break
+        case '%':
+          computation = prev % current
         break
       default:
         return
@@ -185,7 +188,7 @@ document.addEventListener('keydown', function (event) {
     calculator.chooseOperation(event.key)
     calculator.updateDisplay()
   }
-  if (event.key === 'Enter' || event.key === '=') {
+  if (event.key === 'Enter' || event.key === '=') {6
     event.preventDefault();
     calculator.compute()
     calculator.updateDisplay()
