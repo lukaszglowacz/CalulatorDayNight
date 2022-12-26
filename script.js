@@ -20,20 +20,35 @@ function startTime() {
 
 // dark-mode------------------------------------------------------------
 
-const switchTheme = () => {
-  // Get root element and data-theme value
-  const rootElem = document.documentElement
-  let dataTheme = rootElem.getAttribute('data-theme'),
-      newTheme
+var darkMode = true;
+var changeText = false;
+var changeBtn = document.getElementById('dark-mode-check');
+var changePar = document.getElementById('dark-mode-par');
 
-  newTheme = (dataTheme === 'light') ? 'dark' : 'light'
-
-  // Set the new HTML atribute
-  rootElem.setAttribute('data-theme', newTheme)
+function toggleChangeText() {
+  if (changeText) {
+    changePar.innerHTML = "CHANGE TO DARK MODE";
+    changeText = false;
+  } else {
+    changePar.innerHTML = "CHANGE TO LIGHT MODE";
+    changeText = true;
+  }
 }
-// Add event listner for the theme switcher
-document.getElementById('darmodecheck').addEventListener('click', switchTheme)
 
+function toggleDarkMode() {
+  if (darkMode) {
+    document.body.classList.add("dark");
+    darkMode = false;
+  } else {
+    document.body.classList.remove("dark");
+    darkMode = true;
+  }
+}
+
+changeBtn.addEventListener("click", function() {
+  toggleChangeText();
+  toggleDarkMode(); 
+});
 
 // dark-mode------------------------------------------------------------
 
