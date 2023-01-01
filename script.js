@@ -55,5 +55,13 @@ changeBtn.addEventListener("click", function() {
 
 // calculator functions------------------------------------------------------------
 
+const calculator = {
+  displayValue: '0',
+  firstOperand: null,
+  waitingForSecondOperand: false,
+  operator: null
+};
 
-  // calculator functions------------------------------------------------------------
+
+
+// calculator functions------------------------------------------------------------
